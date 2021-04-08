@@ -1,0 +1,24 @@
+I: 3d12f0baaf74161a6e6bbaafdad5a282
+
+II: https://api.themoviedb.org/3/genre/movie/list?api_key=3d12f0baaf74161a6e6bbaafdad5a282
+
+III: Un tableau d'objet 
+
+IV: https://api.themoviedb.org/3/search/movie?query=cinquieme+element&api_key=3d12f0baaf74161a6e6bbaafdad5a282
+	id: 18
+
+V: https://api.themoviedb.org/3/movie/18?api_key=3d12f0baaf74161a6e6bbaafdad5a282
+
+VI: https://api.themoviedb.org/3/movie/18/images?api_key=3d12f0baaf74161a6e6bbaafdad5a282
+	/wgvc3PmjQGtYYDWaeuV867mnFDs.jpg
+	/dwN0kPGrLbFRxyL3F3J3t4ShQx.jpg
+	
+
+VII: https://image.tmdb.org/t/p/w500/dwN0kPGrLbFRxyL3F3J3t4ShQx.jpg
+	 https://image.tmdb.org/t/p/w500/wgvc3PmjQGtYYDWaeuV867mnFDs.jpg
+	 
+VIII: https://api.themoviedb.org/3/movie/18/videos?api_key=3d12f0baaf74161a6e6bbaafdad5a282
+	  https://api.themoviedb.org/3/movie/18?api_key=3d12f0baaf74161a6e6bbaafdad5a282&append_to_response=videos
+	  ZH4islqoA8o
+	  7-9mTiBawSM
+	 
