@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="40d58212-b03d-4b62-a6d9-baffa32e7403" created="2.5.0" activeEnvironment="Default environment" name="REST Project SQUASH TM" resourceRoot="${projectDir}" updated="3.5.0 2020-11-11T18:12:01Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.4.0" authProfile="adminSquash" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="18519a54-d710-48e0-9203-b5f59c9c4afe" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080/squash/api/rest/latest" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>localhost:8080/squash/api/rest/latest</con:endpoint>
+    </con:endpoints>
+    <con:resource name="projects" path="/projects" id="ec724008-aaac-437f-a16c-f8ba7fef542d">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="POST project" id="837ad05c-582b-431b-861c-58f38faef040" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html;charset=ISO-8859-1</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>201 200</con:status>
+          <con:params/>
+          <con:element xmlns:proj="http://localhost/squash/api/rest/latest/projects">proj:Response</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html;charset=utf-8</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element xmlns:proj="http://localhost/squash/api/rest/latest/projects">proj:Fault</con:element>
+        </con:representation>
+        <con:request name="POST Request" id="dcefe21d-2014-4a53-8f77-45b0b96cb96b" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="GET project" id="59b80ad3-aa2b-4884-97a8-d041cf5465e4" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:proj="http://localhost/squash/api/rest/latest/projects">proj:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="5a1d3676-6dce-4694-912b-63998857559f" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="projects/{id}" path="/projects/{id}" id="23ef5b70-ffe7-40f0-b7b1-ef3f2b7f1138">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="GET projects/{id}" id="5977d879-7d4c-4247-ad76-771ee3b9279e" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html;charset=ISO-8859-1</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/squash/api/rest/latest/projects/14">ns:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="0c281026-c783-4471-8ec7-b3e0d4326604" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="test-cases" path="/test-cases" id="54f1a223-d486-435f-a0c5-7e42727e0162">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET test-cases" id="43a0ff09-996b-4ae1-b6d6-2ab4c4711f7a" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html;charset=ISO-8859-1</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:test="http://localhost/squash/api/rest/latest/test-cases">test:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="214126f2-191e-4592-8586-fa010b853755" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="test-steps/{id}" path="/test-steps/{id}" id="516380fc-69c6-4baa-b9e5-9524442269aa">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="PATCH test-steps/{id}" id="34e79919-9518-46db-a3ad-7b4e62a129dc" method="PATCH">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html;charset=ISO-8859-1</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/squash/api/rest/latest/test-steps/169">ns:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="9ddfd86a-4873-4eda-8e39-c07abf867e5e" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="DELETE test-steps/{id}" id="f64f07bd-4d47-4ca1-bd36-219249f9a0c9" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>204</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="02971e4f-bca6-449c-aa21-28c0c2ac3771" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="steps" path="/test-cases/{id}/steps" id="be97c0c0-ab73-4fd5-accb-e1f17b621cfb">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="GET test-steps" id="07e950fa-5cc0-4f6d-af64-134fe3ab026f" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:step="http://localhost/squash/api/rest/latest/test-cases/238/steps">step:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="dbea68f6-48ab-406b-b826-e2547e8fe0f1" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="POST test-steps" id="be138cae-ebeb-4b1c-8671-5bdba28777bc" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element xmlns:step="http://localhost/squash/api/rest/latest/test-cases/238/steps">step:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>201</con:status>
+          <con:params/>
+          <con:element xmlns:step="http://localhost/squash/api/rest/latest/test-cases/238/steps">step:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="ef5f3248-3f3a-4480-980d-fe6712e57d2b" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="e61b712a-5f0e-42d2-be37-3a0208cc68f2" name="Suite_de_tests_Projet">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="67ad1a46-1366-406e-8c7c-90b442270c0d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Creer un projet" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="REST Request" id="d6a99d92-3b33-45f5-940b-e098412722a6">
+        <con:settings/>
+        <con:config service="http://localhost:8080/squash/api/rest/latest" resourcePath="/projects" methodName="POST project" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="dcefe21d-2014-4a53-8f77-45b0b96cb96b" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+            <con:request>{
+  "_type" : "project",
+  "name" : " mon premier project",
+  "label" : "no price tag",
+  "description" : "&lt;p>do something meaningful&lt;/p>"
+}</con:request>
+            <con:originalUri>http://localhost/squash/api/rest/latest/projects</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="8cd1fbd1-5b59-44a3-8e9c-d0c15826215e" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:username>admin</con:username>
+              <con:password>admin</con:password>
+              <con:selectedAuthProfile>adminSquash</con:selectedAuthProfile>
+              <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="6aa58a25-8df4-4f69-a683-268e99e8e4bc" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Afficher tous les projets" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="REST Request" id="1d76c8b0-723e-4f78-aa1c-c889400ee00d">
+        <con:settings/>
+        <con:config service="http://localhost:8080/squash/api/rest/latest" resourcePath="/projects" methodName="GET project" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="5a1d3676-6dce-4694-912b-63998857559f" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/squash/api/rest/latest/projects</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="659f3a72-f59c-4a43-bac6-11c584c4b284" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>adminSquash</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="90b1e137-d6b7-49e4-b951-a66cb699b681" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Afficher un projet" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="REST Request" id="b9d7635d-9569-42c2-aea0-992399b47884">
+        <con:settings/>
+        <con:config service="http://localhost:8080/squash/api/rest/latest" resourcePath="/projects/{id}" methodName="GET projects/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="0c281026-c783-4471-8ec7-b3e0d4326604" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/squash/api/rest/latest/projects/14</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="c45ed5b8-c1a0-481c-b8b6-6a7d519889f4" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>adminSquash</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="14"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties>
+      <con:property>
+        <con:name>id_test-case</con:name>
+      </con:property>
+    </con:properties>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="01e02465-d772-4c2b-b99c-c6c04d29299d" name="Suite_de_tests-CdT_et_PdT">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="e7f2c159-5990-4ba6-997d-0e83124fdbd4" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Afficher tous les cas de test" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="REST Request" id="67681317-d0c2-43a4-a52c-c968c9b7b439">
+        <con:settings/>
+        <con:config service="http://localhost:8080/squash/api/rest/latest" resourcePath="/test-cases" methodName="GET test-cases" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="214126f2-191e-4592-8586-fa010b853755" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/squash/api/rest/latest/test-cases</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="b939811a-3ead-4c63-9931-ad62041061ed" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="ae15e321-e36a-4b7a-aa0a-6527f0a489a2" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>adminSquash</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="57e4fb5e-f1ad-4260-a58d-63041be3c0c9" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Ajouter un pas de test" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="REST Request" id="a1a9288b-d4ec-46ba-a8c6-a4752e26e8db">
+        <con:settings/>
+        <con:config service="http://localhost:8080/squash/api/rest/latest" resourcePath="/test-cases/{id}/steps" methodName="POST test-steps" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="ef5f3248-3f3a-4480-980d-fe6712e57d2b" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+            <con:request>{
+  "_type" : "action-step",
+  "action" : "&lt;p>creer un pas de test&lt;/p>",
+  "expected_result" : "&lt;p>je vois mon pas de test&lt;/p>"
+}</con:request>
+            <con:originalUri>http://localhost/squash/api/rest/latest/test-cases/238/steps</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="0656a28a-ac8e-4e48-ae9c-eb9bf176b0cf" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>adminSquash</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="${#[Suite_de_tests-CdT_et_PdT#Afficher tous les cas de test#REST Request]#Response#$['_embedded']['test-cases'][0]['id']}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="1d510c75-48de-4110-81d2-2752ba08fc4f" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Modifier un pas de test" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="REST Request" id="307b0ffb-f972-43ca-99e8-f18f7dfeb7a4">
+        <con:settings/>
+        <con:config service="http://localhost:8080/squash/api/rest/latest" resourcePath="/test-steps/{id}" methodName="PATCH test-steps/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="9ddfd86a-4873-4eda-8e39-c07abf867e5e" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+            <con:request>{
+  "_type" : "action-step",
+  "action" : "&lt;p>Pas de test modif&lt;/p>",
+  "expected_result" : "&lt;p>La modif est verifie&lt;/p>"
+}</con:request>
+            <con:originalUri>http://localhost/squash/api/rest/latest/test-steps/169</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="452cfd97-1732-4271-ac85-8ca7ea46e55c" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>adminSquash</con:selectedAuthProfile>
+              <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="${#[Suite_de_tests-CdT_et_PdT#Ajouter un pas de test#REST Request]#Response#$['id']}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="0d4e5c05-cb1b-4247-8309-4e50de5cd02b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Afficher les pas-de-tests d'un cas-de-test" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="REST Request" id="543ac82a-445e-4eb4-81cb-7488f486eaae">
+        <con:settings/>
+        <con:config service="http://localhost:8080/squash/api/rest/latest" resourcePath="/test-cases/{id}/steps" methodName="GET test-steps" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="dbea68f6-48ab-406b-b826-e2547e8fe0f1" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/squash/api/rest/latest/test-cases/238/steps</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="a3feefef-a3df-4c2f-b2dc-67909bcf9a67" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>adminSquash</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="${#[Suite_de_tests-CdT_et_PdT#Afficher tous les cas de test#REST Request]#Response#$['_embedded']['test-cases'][0]['id']}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="64d3b411-2996-4907-9988-d6e39339665b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Supprimer un pas de test" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="REST Request 2" id="bfa44980-9f4d-4e8e-bdcd-15415dbed481">
+        <con:settings/>
+        <con:config service="http://localhost:8080/squash/api/rest/latest" resourcePath="/test-steps/{id}" methodName="DELETE test-steps/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request 2" id="02971e4f-bca6-449c-aa21-28c0c2ac3771" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8080/squash/api/rest/latest</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/squash/api/rest/latest/test-steps/167</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="a415066e-9280-4952-95d6-9d039c8c4274" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>204</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>adminSquash</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="${#[Suite_de_tests-CdT_et_PdT#Afficher les pas-de-tests d'un cas-de-test#REST Request]#Response#$['_embedded']['steps'][2]['id']}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer>
+    <con:outgoing mustUnderstand="false">
+      <con:name>basic_auth</con:name>
+      <con:username>admin</con:username>
+      <con:usePredefinedOrder>false</con:usePredefinedOrder>
+    </con:outgoing>
+  </con:wssContainer>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository>
+    <con:basicAuthEntry>
+      <con:name>adminSquash</con:name>
+      <con:type>Basic</con:type>
+      <con:username>admin</con:username>
+      <con:password>admin</con:password>
+      <con:preemptive>false</con:preemptive>
+    </con:basicAuthEntry>
+  </con:authRepository>
+  <con:tags/>
+  <con:sensitiveInformation/>
+</con:soapui-project>
