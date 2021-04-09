@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="66b7d249-c483-4243-82f4-8af7dad1f1d7" created="3.7.0" activeEnvironment="Default environment" name="Project squash tm" updated="3.7.0 2021-03-30T19:14:40Z" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="8841419f-3de9-435e-8c78-aec86af4a74b" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8181/squash/api/rest/latest" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8181/squash/api/rest/latest</con:endpoint></con:endpoints><con:resource name="projects" path="/projects" id="c5bd141d-b76a-4300-8090-8f0c9034c183"><con:settings/><con:parameters/><con:method name="Method 1" id="da929d32-e0cc-46a4-9e47-0cc49b8844dd" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=ISO-8859-1</con:mediaType><con:status>401</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:proj="http://localhost/squash/api/rest/latest/projects">proj:Response</con:element></con:representation><con:request name="Request 1" id="b1130f8d-b80e-4507-aa6f-8cae6227dfbc" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8181/squash/api/rest/latest</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="d18d4e21-a4c3-4af6-8393-01b04ac2a667" name="Test Suite projet squash"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="29c9b355-f4cc-4a97-84e2-5c82a80d6b03" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="creer un projet squash" searchProperties="true" timeout="0"><con:settings/><con:testStep type="restrequest" name="REST Request" id="5ddb2769-c5e8-4a89-ad91-d883602f3061"><con:settings/><con:config service="http://localhost:8181/squash/api/rest/latest" resourcePath="/projects" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="b1130f8d-b80e-4507-aa6f-8cae6227dfbc" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8181/squash/api/rest/latest</con:endpoint><con:request>{
+  "_type" : "project",
+  "name" : "mon premier project cree a distance",
+  "label" : "projet super",
+  "description" : "&lt;p>pppppp&lt;/p>"
+}</con:request><con:originalUri>http://localhost/squash/api/rest/latest/projects</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="abf3a044-731c-4942-92e3-552e1bc1c01b" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200,201</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="46690754-93bb-4cb2-9e30-129f330da3eb" name="Response SLA"><con:configuration><SLA>10000</SLA></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>basic_admin</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest"><con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script></con:eventHandlers><con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep"><con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script></con:eventHandlers><con:authRepository><con:basicAuthEntry><con:name>basic_admin</con:name><con:type>Basic</con:type><con:username>admin</con:username><con:password>admin</con:password></con:basicAuthEntry></con:authRepository><con:tags/></con:soapui-project>
